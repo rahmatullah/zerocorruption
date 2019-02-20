@@ -1,0 +1,92 @@
+
+<html>
+        <header>
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        </header>
+        <body>
+          <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="#">
+                          <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+                          Blockchain is awesome!
+                      </a>
+                      <ul class="nav navbar-nav">
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/about">About</a></li>
+                      </ul>
+                  </div>
+              </div>
+              </nav>
+              <div>
+                <%if (value) { %>
+                    <h3>DB Data</h3>
+                  <table class="table">
+                    <thead>
+                      <th>#</th>
+                      <th>Age</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Operation</th>
+                    </thead>
+                    <tbody>
+                     
+                          <tr>
+                            <td>1</li>
+                            <td> 
+                                <% if(value.age == ether['0']) { %>
+                                <spna><%= value.age %> </spna>
+                                <%} else {%>
+                                    <spna style="color: red"><%= value.age %> </spna>
+                                <%}%>
+                            </td>
+                            <td> 
+                                <% if(value.first_name == ether['1']) { %>
+                                <spna><%= value.first_name %> </spna>
+                                <%} else {%>
+                                    <spna style="color: red"><%= value.first_name %> </spna>
+                                <%}%>
+                            </td>
+                            <td> 
+                                <% if(value.last_name == ether['2']) { %>
+                                <spna><%= value.last_name %> </spna>
+                                <%} else {%>
+                                    <spna style="color: red"><%= value.last_name %> </spna>
+                                <%}%>
+                            </td>
+                          </tr>
+                    </tbody>
+                  </table>
+                <% } else {%>
+                    <di> No value found</di>
+                <%}%>
+              </div>
+              <div>
+                    <%if (ether) { %>
+                        <h3>Blockchain Data</h3>
+                      <table class="table">
+                        <thead>
+                          <th>#</th>
+                          <th>Age</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Operation</th>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                <td>2</li>
+                                <td> <%= ether['0'] %> </td>
+                                <td> <%= ether['1'] %> </td>
+                                <td> <%= ether['2'] %> </td>
+                              </tr>
+                        </tbody>
+                      </table>
+                    <% } else {%>
+                        <di> No values found</di>
+                    <%}%>
+                </div>
+            </div>
+        </body>
+      </html>
+              
